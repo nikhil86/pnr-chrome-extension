@@ -1,0 +1,46 @@
+{
+  "EY": {
+    "singleSegment": {
+      "from": "AUH",
+      "to": "BAH",
+      "airline": "EY",
+      "flightNumber": 371,
+      "clazz": "Y",
+      "todayPlus": 1,
+      "adult": 1
+    }
+  },
+  "PG": {
+    "singleSegment": {
+      "from": "USM",
+      "to": "BKK",
+      "airline": "PG",
+      "flightNumber": 136,
+      "clazz": "Y",
+      "todayPlus": 1,
+      "adult": 1
+    }
+  },
+  "PR": {
+    "singleSegment": {
+      "from": "MNL",
+      "to": "DVO",
+      "airline": "PR",
+      "flightNumber": 2811,
+      "clazz": "Y",
+      "todayPlus": 1,
+      "adult": 1
+    }
+  },
+  "B2": {
+    "singleSegment": {
+      "from": "DME",
+      "to": "MSQ",
+      "airline": "B2",
+      "flightNumber": 994,
+      "clazz": "Y",
+      "todayPlus": 1,
+      "adult": 1
+    }
+  }
+}

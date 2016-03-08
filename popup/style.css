@@ -1,0 +1,30 @@
+.container {
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container .title {
+    background: linear-gradient(to bottom, #00b7ea 0%, #009ec3 100%);
+    margin-bottom: 5px;
+}
+
+.container .title h4 {
+    padding-left: 10px;
+}
+
+.container .segments.row {
+    padding: 0 10px;
+}
+
+.pnr-details{
+    padding: 10px 10px;
+}
+
+.pnr-details .form-group, .segments > .segment .form-group {
+    padding-left: 0px;
+}
+
+.container .pnr {
+    background: beige;
+}
