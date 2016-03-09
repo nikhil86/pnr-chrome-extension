@@ -4,8 +4,7 @@
   "version": "0.0.1",
   "permissions": [
     "tabs",
-    "http://10.16.190.95:8085/*",
-    "http://sswhli471:9085/*"
+    "http://ec2-52-3-163-28.compute-1.amazonaws.com:9080/*"
   ],
   "browser_action": {
     "default_icon" : "img/icon37.png",
