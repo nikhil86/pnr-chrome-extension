@@ -100,12 +100,25 @@ define(function (require) {
 
   Model.prototype.getPNR = function(data) {
     var pnrInfo = this.getData(data);
+    var storefront = 'EY';
+    chrome.tabs.getSelected(null, function (tab) {
+          var url = tab.url;
+          var matches = url.match(/\/[A-Z][A-Z0-9]M0\//);
+          if (!_.isEmpty(matches)) {
+              storefront = matches[0].substring(1,3);;
+          }
+    });
     return B.resolve($.ajax({
-        url: 'http://sswhli471:9085/PNR',
+        url: 'http://ec2-52-3-163-28.compute-1.amazonaws.com:9080/PNR',
         method: 'POST',
         dataType: "json",
         contentType: "application/json",
-        data: JSON.stringify(pnrInfo)
+        data: JSON.stringify(pnrInfo),
+        beforeSend: function (request)
+            {
+                request.setRequestHeader("airline", storefront);
+                request.setRequestHeader("environment", "CERT");
+            }
       }))
       .then(function(tokenResponse) {
         if (tokenResponse.pnr) {
