@@ -101,11 +101,16 @@ define(function (require) {
   Model.prototype.getPNR = function(data) {
     var pnrInfo = this.getData(data);
     return B.resolve($.ajax({
-        url: 'http://sswhli471:9085/PNR',
+        url: 'http://ec2-52-3-163-28.compute-1.amazonaws.com:9080/PNR',
         method: 'POST',
         dataType: "json",
         contentType: "application/json",
-        data: JSON.stringify(pnrInfo)
+        data: JSON.stringify(pnrInfo),
+        beforeSend: function (request)
+            {
+                request.setRequestHeader("airline", "EY");
+                request.setRequestHeader("environment", "CERT");
+            }
       }))
       .then(function(tokenResponse) {
         if (tokenResponse.pnr) {
